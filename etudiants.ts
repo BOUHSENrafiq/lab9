@@ -29,14 +29,19 @@ export class Etudiants {
         this._nom = value;
     }
 
+    /**
+     * @ return la moyenne d'un étudiant
+     */
     calculerMoyenne() {
         let sum: number = 0;
         for (let i = 0; i < this.notes.length - 1; i++) {
             sum += this.notes[i];
         }
-        return  sum / this.notes.length;
+        return  sum/this.notes.length;
     }
-
+    /**
+     * @return la note max d'un étudiant.
+     */
     getMax() {
         let max = this.notes[0];
         for (let i = 1; i < this.notes.length - 1; i++) {
@@ -47,6 +52,9 @@ export class Etudiants {
         return max;
     }
 
+    /**
+     * @return la notes min d'un étudiant.
+     */
     getMin() {
         let min = this.notes[0];
         for (let i = 0; i < this.notes.length - 1; i++) {
