@@ -1,5 +1,11 @@
 "use strict";
+/**
+ * @author rafiq BOUHSEN
+ */
 Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * @class Etudiants
+ */
 var Etudiants = /** @class */ (function () {
     /**
      * constructor de la classe Etudiant

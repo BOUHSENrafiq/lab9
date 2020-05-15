@@ -1,17 +1,25 @@
 "use strict";
+/**
+ * @author rafiq BOUHSEN
+ */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Cours = void 0;
+/**
+ *  @class Cours
+ */
 var Cours = /** @class */ (function () {
     function Cours() {
     }
     Object.defineProperty(Cours.prototype, "id", {
+        /**
+         * les getters et les setters des attributs: id, title, nbrJours et etudiant
+         */
         get: function () {
             return this._id;
         },
         set: function (value) {
             this._id = value;
         },
-        enumerable: false,
+        enumerable: true,
         configurable: true
     });
     Object.defineProperty(Cours.prototype, "title", {
@@ -21,7 +29,7 @@ var Cours = /** @class */ (function () {
         set: function (value) {
             this._title = value;
         },
-        enumerable: false,
+        enumerable: true,
         configurable: true
     });
     Object.defineProperty(Cours.prototype, "nbrJours", {
@@ -31,7 +39,7 @@ var Cours = /** @class */ (function () {
         set: function (value) {
             this._nbrJours = value;
         },
-        enumerable: false,
+        enumerable: true,
         configurable: true
     });
     Object.defineProperty(Cours.prototype, "etudiant", {
@@ -41,7 +49,7 @@ var Cours = /** @class */ (function () {
         set: function (value) {
             this._etudiant = value;
         },
-        enumerable: false,
+        enumerable: true,
         configurable: true
     });
     // retourne la moyenne d'un objet de type cours (la moyenne des moyennes des étudiants)
@@ -55,3 +63,4 @@ var Cours = /** @class */ (function () {
     return Cours;
 }());
 exports.Cours = Cours;
+//# sourceMappingURL=cours.js.map

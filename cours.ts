@@ -1,11 +1,33 @@
+/**
+ * @author rafiq BOUHSEN
+ */
+
 import {Etudiants} from "./etudiants";
 
+/**
+ *  @class Cours
+ */
 export class Cours {
+    /**id
+     * @type {number}
+     */
     private _id: number; // un attribut privé de type number.
+    /**title
+     * @type {number}
+     */
     private _title: string; // un attribut privé de type string.
+    /** nbrJours
+     * @type {number}
+     */
     private _nbrJours: number // un attribut privé de type number.
+    /** etudiant
+     * @type {(number|Array)}
+     */
     private _etudiant: Etudiants[]; //  un tableau d'objets de type Etudiants.
 
+    /**
+     * les getters et les setters des attributs: id, title, nbrJours et etudiant
+     */
     get id(): number {
         return this._id;
     }
@@ -38,6 +60,8 @@ export class Cours {
     set etudiant(value: Etudiants[]) {
         this._etudiant = value;
     }
+
+
     // retourne la moyenne d'un objet de type cours (la moyenne des moyennes des étudiants)
     calculerMoyenneCours():void{}
     // retourne l'indice de l’étudiant dans le tableau etudiants ayant la meilleure moyenne de le cours.

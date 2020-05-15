@@ -1,3 +1,10 @@
+/**
+ * @author rafiq BOUHSEN
+ */
+
+/**
+ * @class Etudiants
+ */
 export class Etudiants {
     /**
      * variable id
