@@ -1,13 +1,16 @@
 export class Etudiants {
     /**
+     * variable id
      * @type {number}
      */
     private _id: number; // un attribut privée de type nombre.
     /**
+     * variable nom
      * @type {string}
      */
     private _nom: string; // un attribut privée de type chaîne de caractères
     /**
+     * variable notes
      * @type {(number|Array.)}
      */
     public notes: number[] = []; // un attribut privée de type tableau de nombres
@@ -45,6 +48,10 @@ export class Etudiants {
      * @ return la moyenne d'un étudiant
      */
     calculerMoyenne() {
+        /**
+         * variable sum
+         * @type {number}
+         */
         let sum: number = 0;
         for (let i = 0; i < this.notes.length - 1; i++) {
             sum += this.notes[i];
