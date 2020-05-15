@@ -1,6 +1,15 @@
 export class Etudiants {
+    /**
+     * @type {number}
+     */
     private _id: number; // un attribut privée de type nombre.
+    /**
+     * @type {string}
+     */
     private _nom: string; // un attribut privée de type chaîne de caractères
+    /**
+     * @type {(number|Array.)}
+     */
     public notes: number[] = []; // un attribut privée de type tableau de nombres
 
     /**
@@ -13,6 +22,9 @@ export class Etudiants {
         this._nom = nom;
     }
 
+    /**
+     * les getters et les setters des attributs id et nom
+     */
     get id(): number {
         return this._id;
     }
@@ -51,9 +63,8 @@ export class Etudiants {
         }
         return max;
     }
-
     /**
-     * @return la notes min d'un étudiant.
+     * @return la note min d'un étudiant.
      */
     getMin() {
         let min = this.notes[0];
