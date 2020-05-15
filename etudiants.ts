@@ -53,7 +53,7 @@ export class Etudiants {
          * @type {number}
          */
         let sum: number = 0;
-        for (let i = 0; i < this.notes.length - 1; i++) {
+        for (let i = 0; i < this.notes.length; i++) {
             sum += this.notes[i];
         }
         return  sum/this.notes.length;
@@ -63,7 +63,7 @@ export class Etudiants {
      */
     getMax() {
         let max = this.notes[0];
-        for (let i = 1; i < this.notes.length - 1; i++) {
+        for (let i = 0; i < this.notes.length; i++) {
             if (this.notes[i] > max) {
                 max = this.notes[i];
             }

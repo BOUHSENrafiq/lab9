@@ -1,20 +1,31 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Etudiants = void 0;
 var Etudiants = /** @class */ (function () {
+    /**
+     * constructor de la classe Etudiant
+     * @param id
+     * @param nom
+     */
     function Etudiants(id, nom) {
-        this.notes = [];
+        /**
+         * variable notes
+         * @type {(number|Array.)}
+         */
+        this.notes = []; // un attribut privée de type tableau de nombres
         this._id = id;
         this._nom = nom;
     }
     Object.defineProperty(Etudiants.prototype, "id", {
+        /**
+         * les getters et les setters des attributs id et nom
+         */
         get: function () {
             return this._id;
         },
         set: function (value) {
             this._id = value;
         },
-        enumerable: false,
+        enumerable: true,
         configurable: true
     });
     Object.defineProperty(Etudiants.prototype, "nom", {
@@ -24,36 +35,48 @@ var Etudiants = /** @class */ (function () {
         set: function (value) {
             this._nom = value;
         },
-        enumerable: false,
+        enumerable: true,
         configurable: true
     });
+    /**
+     * @ return la moyenne d'un étudiant
+     */
     Etudiants.prototype.calculerMoyenne = function () {
+        /**
+         * variable sum
+         * @type {number}
+         */
         var sum = 0;
-        var moyenne = 0;
-        for (var i = 0; i < this.notes.length - 1; i++) {
+        for (var i = 0; i < this.notes.length; i++) {
             sum += this.notes[i];
-            moyenne = sum / this.notes.length;
         }
-        return moyenne;
+        return sum / this.notes.length;
     };
+    /**
+     * @return la note max d'un étudiant.
+     */
     Etudiants.prototype.getMax = function () {
-        var max;
-        for (var i = 0; i < this.notes.length - 1; i++) {
-            if (this.notes[i] > this.notes[i + 1]) {
+        var max = this.notes[0];
+        for (var i = 0; i < this.notes.length; i++) {
+            if (this.notes[i] > max) {
                 max = this.notes[i];
             }
-            return max;
         }
+        return max;
     };
+    /**
+     * @return la note min d'un étudiant.
+     */
     Etudiants.prototype.getMin = function () {
-        var min;
+        var min = this.notes[0];
         for (var i = 0; i < this.notes.length - 1; i++) {
-            if (this.notes[i] < this.notes[i + 1]) {
+            if (this.notes[i] < min) {
                 min = this.notes[i];
             }
-            return min;
         }
+        return min;
     };
     return Etudiants;
 }());
 exports.Etudiants = Etudiants;
+//# sourceMappingURL=etudiants.js.map
