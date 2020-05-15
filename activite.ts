@@ -1,10 +1,27 @@
-export class Activite{
-    private _id :number; //un attribut privé de type number.
-private _title : string; //un attribut privé de type string.
-private _Description : string; // un attribut privé de type string.
-private _urlYoutube :string; //un attribut privé de type string.
+/**
+ *@author rafiq BOUHSEN
+ */
+export class Activite {
+    /** id
+     * @type {number}
+     */
+    private _id: number; //un attribut privé de type number.
+    /** title
+     * @type {string}
+     */
+    private _title: string; //un attribut privé de type string.
+    /** Description
+     * @type {string}
+     */
+    private _Description: string; // un attribut privé de type string.
+    /** urlYoutube
+     * @type {string}
+     */
+    private _urlYoutube: string; //un attribut privé de type string.
 
-
+    /**
+     *  Les getters et les setters.
+     */
     get id(): number {
         return this._id;
     }
@@ -37,6 +54,13 @@ private _urlYoutube :string; //un attribut privé de type string.
         this._urlYoutube = value;
     }
 
+    /**Constructor
+     *
+     * @param id
+     * @param title
+     * @param Description
+     * @param urlYoutube
+     */
     constructor(id: number, title: string, Description: string, urlYoutube: string) {
         this._id = id;
         this._title = title;

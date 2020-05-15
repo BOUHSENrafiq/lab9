@@ -52,7 +52,6 @@ export class Cours {
         this._nbrJours = value;
     }
 
-
     get etudiant(): Etudiants[] {
         return this._etudiant;
     }
@@ -62,12 +61,28 @@ export class Cours {
     }
 
 
-    // retourne la moyenne d'un objet de type cours (la moyenne des moyennes des étudiants)
-    calculerMoyenneCours():void{}
-    // retourne l'indice de l’étudiant dans le tableau etudiants ayant la meilleure moyenne de le cours.
-    getIndexMax():void{}
-    // affiche le nom du premier étudiant ayant la meilleure moyenne dans le cours.
-    getNomMax():void{}
-    // affiche la moyenne du premier Etudiant dont le nom est passé en paramètre.
-    getMoyenneParNom(nom: string):void{}
+    /** Retourne la moyenne d'un objet de type cours (la moyenne des moyennes des étudiants)
+     *
+     */
+    calculerMoyenneCours(): void {
+    }
+
+    /** Retourne l'indice de l’étudiant dans le tableau etudiants ayant la meilleure moyenne de le cours.
+     *
+     */
+    getIndexMax(): void {
+    }
+
+    /** Affiche le nom du premier étudiant ayant la meilleure moyenne dans le cours.
+     *
+     */
+    getNomMax(): void {
+    }
+
+    /** Affiche la moyenne du premier Etudiant dont le nom est passé en paramètre.
+     *
+     * @param nom
+     */
+    getMoyenneParNom(nom: string): void {
+    }
 }

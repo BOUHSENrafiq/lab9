@@ -1,7 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Activite = void 0;
+/**
+ *@author rafiq BOUHSEN
+ */
 var Activite = /** @class */ (function () {
+    /**Constructor
+     *
+     * @param id
+     * @param title
+     * @param Description
+     * @param urlYoutube
+     */
     function Activite(id, title, Description, urlYoutube) {
         this._id = id;
         this._title = title;
@@ -9,13 +18,16 @@ var Activite = /** @class */ (function () {
         this._urlYoutube = urlYoutube;
     }
     Object.defineProperty(Activite.prototype, "id", {
+        /**
+         *  Les getters et les setters.
+         */
         get: function () {
             return this._id;
         },
         set: function (value) {
             this._id = value;
         },
-        enumerable: false,
+        enumerable: true,
         configurable: true
     });
     Object.defineProperty(Activite.prototype, "title", {
@@ -25,7 +37,7 @@ var Activite = /** @class */ (function () {
         set: function (value) {
             this._title = value;
         },
-        enumerable: false,
+        enumerable: true,
         configurable: true
     });
     Object.defineProperty(Activite.prototype, "Description", {
@@ -35,7 +47,7 @@ var Activite = /** @class */ (function () {
         set: function (value) {
             this._Description = value;
         },
-        enumerable: false,
+        enumerable: true,
         configurable: true
     });
     Object.defineProperty(Activite.prototype, "urlYoutube", {
@@ -45,9 +57,10 @@ var Activite = /** @class */ (function () {
         set: function (value) {
             this._urlYoutube = value;
         },
-        enumerable: false,
+        enumerable: true,
         configurable: true
     });
     return Activite;
 }());
 exports.Activite = Activite;
+//# sourceMappingURL=activite.js.map

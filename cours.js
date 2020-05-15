@@ -52,14 +52,27 @@ var Cours = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    // retourne la moyenne d'un objet de type cours (la moyenne des moyennes des étudiants)
-    Cours.prototype.calculerMoyenneCours = function () { };
-    // retourne l'indice de l’étudiant dans le tableau etudiants ayant la meilleure moyenne de le cours.
-    Cours.prototype.getIndexMax = function () { };
-    // affiche le nom du premier étudiant ayant la meilleure moyenne dans le cours.
-    Cours.prototype.getNomMax = function () { };
-    // affiche la moyenne du premier Etudiant dont le nom est passé en paramètre.
-    Cours.prototype.getMoyenneParNom = function (nom) { };
+    /** Retourne la moyenne d'un objet de type cours (la moyenne des moyennes des étudiants)
+     *
+     */
+    Cours.prototype.calculerMoyenneCours = function () {
+    };
+    /** Retourne l'indice de l’étudiant dans le tableau etudiants ayant la meilleure moyenne de le cours.
+     *
+     */
+    Cours.prototype.getIndexMax = function () {
+    };
+    /** Affiche le nom du premier étudiant ayant la meilleure moyenne dans le cours.
+     *
+     */
+    Cours.prototype.getNomMax = function () {
+    };
+    /** Affiche la moyenne du premier Etudiant dont le nom est passé en paramètre.
+     *
+     * @param nom
+     */
+    Cours.prototype.getMoyenneParNom = function (nom) {
+    };
     return Cours;
 }());
 exports.Cours = Cours;
