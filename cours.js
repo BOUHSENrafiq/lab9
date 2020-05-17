@@ -73,6 +73,7 @@ var Cours = /** @class */ (function () {
     Cours.prototype.getIndexMax = function () {
         var max = this.etudiant[0].calculerMoyenne(); // initialiser le max
         var indice = 0; // initialiser l'indice à 0
+        var nom = this.etudiant[0].nom;
         for (var i = 0; i < this.etudiant.length; i++) { // boucle for pour parcourir les élément du tableau
             if (this.etudiant[i].calculerMoyenne() > max) { // condition  sur les éléments du tableau : pour détérminer la moyenne
                 //max = this.etudiant[i].calculerMoyenne(); pour afficher la meilleur moyenne.
@@ -80,6 +81,21 @@ var Cours = /** @class */ (function () {
             }
         }
         return indice;
+    };
+    /** Affiche le nom du premier étudiant ayant la meilleure moyenne dans le cours.
+     *
+     */
+    Cours.prototype.getNomMax = function () {
+        var max = this.etudiant[0].calculerMoyenne();
+        var nom = this.etudiant[0].nom;
+        for (var i = 0; i < this.etudiant.length; i++) { // boucle for pour parcourir les élément du tableau
+            if (this.etudiant[i].calculerMoyenne() > max) { // condition  sur les éléments du tableau : pour détérminer la moyenne
+                //max = this.etudiant[i].calculerMoyenne(); pour afficher la meilleur moyenne.
+                //indice = i;  // affectation de l'indice
+                nom = this.etudiant[i].nom;
+            }
+        }
+        return nom;
     };
     return Cours;
 }());
