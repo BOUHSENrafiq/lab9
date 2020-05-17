@@ -65,7 +65,21 @@ var Cours = /** @class */ (function () {
         for (var i = 0; i < this.etudiant.length; i++) {
             sum += this.etudiant[i].calculerMoyenne(); // calcul de la somme des moyennes des étudiants
         }
-        return sum / this.etudiant.length; // calcul de la moyenne de la classe
+        return sum / this.etudiant.length; // calcul de la moyenne de la classe dans un cours
+    };
+    /** Retourne l'indice de l’étudiant dans le tableau etudiants ayant la meilleure moyenne du cours.
+     *
+     */
+    Cours.prototype.getIndexMax = function () {
+        var max = this.etudiant[0].calculerMoyenne(); // initialiser le max
+        var indice = 0; // initialiser l'indice à 0
+        for (var i = 0; i < this.etudiant.length; i++) { // boucle for pour parcourir les élément du tableau
+            if (this.etudiant[i].calculerMoyenne() > max) { // condition  sur les éléments du tableau : pour détérminer la moyenne
+                //max = this.etudiant[i].calculerMoyenne(); pour afficher la meilleur moyenne.
+                indice = i; // affectation de l'indice
+            }
+        }
+        return indice;
     };
     return Cours;
 }());

@@ -37,3 +37,4 @@ const etudiants : Etudiants[]=[etudiant1,etudiant2,etudiant3];
 let cours1 = new Cours(1,"java",120,etudiants);
 console.log('Titre du cours: '+cours1.title);
 console.log('la moyenne de la classe est: '+cours1.calculerMoyenneCours());
+console.log("L'indice de l'étudiant est : "+cours1.getIndexMax());

@@ -37,4 +37,5 @@ var etudiants = [etudiant1, etudiant2, etudiant3];
 var cours1 = new cours_1.Cours(1, "java", 120, etudiants);
 console.log('Titre du cours: ' + cours1.title);
 console.log('la moyenne de la classe est: ' + cours1.calculerMoyenneCours());
+console.log("L'indice de l'étudiant est : " + cours1.getIndexMax());
 //# sourceMappingURL=main.js.map
