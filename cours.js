@@ -100,6 +100,13 @@ var Cours = /** @class */ (function () {
      * @param nom
      */
     Cours.prototype.getMoyenneParNom = function (nom) {
+        var moyenne = 0; // initialiser la moyenne
+        for (var i = 0; i < this.etudiant.length; i++) {
+            if (nom === this.etudiant[i].nom) {
+                moyenne = this.etudiant[i].calculerMoyenne(); // déterminer la moyenne de la personne qui porte le nom X
+            }
+        }
+        return moyenne;
     };
     return Cours;
 }());

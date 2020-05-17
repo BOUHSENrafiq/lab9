@@ -72,11 +72,11 @@ export class Cours {
      */
     calculerMoyenneCours() {
         let sum: number = 0;
-        console.log('nombre des etudiants est: '+this.etudiant.length);
+        console.log('nombre des etudiants est: ' + this.etudiant.length);
         for (let i = 0; i < this.etudiant.length; i++) {
             sum += this.etudiant[i].calculerMoyenne();     // calcul de la somme des moyennes des étudiants
         }
-        return  sum/this.etudiant.length;  // calcul de la moyenne de la classe dans un cours
+        return sum / this.etudiant.length;  // calcul de la moyenne de la classe dans un cours
     }
 
     /** Retourne l'indice de l’étudiant dans le tableau etudiants ayant la meilleure moyenne du cours.
@@ -84,12 +84,12 @@ export class Cours {
      */
     getIndexMax() {
         let max = this.etudiant[0].calculerMoyenne(); // initialiser le max
-        let indice=0; // initialiser l'indice à 0
-        let nom:string = this.etudiant[0].nom;
-        for (let i=0; i < this.etudiant.length; i++) {  // boucle for pour parcourir les élément du tableau
-            if (this.etudiant[i].calculerMoyenne() > max){   // condition  sur les éléments du tableau : pour détérminer la moyenne
-            //max = this.etudiant[i].calculerMoyenne(); pour afficher la meilleur moyenne.
-            indice = i;  // affectation de l'indice
+        let indice = 0; // initialiser l'indice à 0
+        let nom: string = this.etudiant[0].nom;
+        for (let i = 0; i < this.etudiant.length; i++) {  // boucle for pour parcourir les élément du tableau
+            if (this.etudiant[i].calculerMoyenne() > max) {   // condition  sur les éléments du tableau : pour détérminer la moyenne
+                //max = this.etudiant[i].calculerMoyenne(); pour afficher la meilleur moyenne.
+                indice = i;  // affectation de l'indice
             }
         }
         return indice;
@@ -98,11 +98,11 @@ export class Cours {
     /** Affiche le nom du premier étudiant ayant la meilleure moyenne dans le cours.
      *
      */
-    getNomMax(){
+    getNomMax() {
         let max = this.etudiant[0].calculerMoyenne();
-        let nom:string = this.etudiant[0].nom;
-        for (let i=0; i < this.etudiant.length; i++) {  // boucle for pour parcourir les élément du tableau
-            if (this.etudiant[i].calculerMoyenne() > max){   // condition  sur les éléments du tableau : pour détérminer la moyenne la plus grande
+        let nom: string = this.etudiant[0].nom;
+        for (let i = 0; i < this.etudiant.length; i++) {  // boucle for pour parcourir les élément du tableau
+            if (this.etudiant[i].calculerMoyenne() > max) {   // condition  sur les éléments du tableau : pour détérminer la moyenne la plus grande
                 nom = this.etudiant[i].nom; // détérminer le nom
             }
         }
@@ -114,6 +114,12 @@ export class Cours {
      * @param nom
      */
     getMoyenneParNom(nom: string) {
-
+        let moyenne = 0; // initialiser la moyenne
+        for (let i = 0; i < this.etudiant.length; i++) {
+            if (nom === this.etudiant[i].nom) {
+                moyenne = this.etudiant[i].calculerMoyenne(); // déterminer la moyenne de la personne qui porte le nom X
+            }
+        }
+        return moyenne;
     }
 }

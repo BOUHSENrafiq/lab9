@@ -39,5 +39,5 @@ console.log('Titre du cours: ' + cours1.title);
 console.log('la moyenne de la classe est: ' + cours1.calculerMoyenneCours());
 console.log("L'indice de l'étudiant ayant la meilleure moyenne est : " + cours1.getIndexMax());
 console.log("le nom de l'étudiant ayant la meilleure moyenne est : " + cours1.getNomMax());
-console.log("le nom de l'étudiant ayant la meilleure moyenne est : " + cours1.getMoyenneParNom("salma"));
+console.log("la moyenne est : " + cours1.getMoyenneParNom("siham"));
 //# sourceMappingURL=main.js.map
