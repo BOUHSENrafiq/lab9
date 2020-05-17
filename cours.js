@@ -56,7 +56,7 @@ var Cours = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    /** Retourne la moyenne d'un objet de type cours (la moyenne des moyennes des étudiants)
+    /** Retourner la moyenne d'un objet de type cours (la moyenne des moyennes des étudiants)
      *
      */
     Cours.prototype.calculerMoyenneCours = function () {
@@ -67,13 +67,16 @@ var Cours = /** @class */ (function () {
         }
         return sum / this.etudiant.length; // calcul de la moyenne de la classe dans un cours
     };
-    /** Retourne l'indice de l’étudiant dans le tableau etudiants ayant la meilleure moyenne du cours.
+    /** Retourner l'indice de l’étudiant dans le tableau etudiants ayant la meilleure moyenne du cours.
      *
      */
     Cours.prototype.getIndexMax = function () {
+        /**
+         * indice et max
+         * @type {number}
+         */
         var max = this.etudiant[0].calculerMoyenne(); // initialiser le max
         var indice = 0; // initialiser l'indice à 0
-        var nom = this.etudiant[0].nom;
         for (var i = 0; i < this.etudiant.length; i++) { // boucle for pour parcourir les élément du tableau
             if (this.etudiant[i].calculerMoyenne() > max) { // condition  sur les éléments du tableau : pour détérminer la moyenne
                 //max = this.etudiant[i].calculerMoyenne(); pour afficher la meilleur moyenne.
@@ -82,7 +85,7 @@ var Cours = /** @class */ (function () {
         }
         return indice;
     };
-    /** Affiche le nom du premier étudiant ayant la meilleure moyenne dans le cours.
+    /** Afficher le nom du premier étudiant ayant la meilleure moyenne dans le cours.
      *
      */
     Cours.prototype.getNomMax = function () {
@@ -95,8 +98,7 @@ var Cours = /** @class */ (function () {
         }
         return nom;
     };
-    /** Affiche la moyenne du premier Etudiant dont le nom est passé en paramètre.
-     *
+    /** Afficher la moyenne du premier Etudiant dont le nom est passé en paramètre.
      * @param nom
      */
     Cours.prototype.getMoyenneParNom = function (nom) {
