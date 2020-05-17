@@ -61,9 +61,9 @@ export class Etudiants {
          */
         let sum: number = 0;
         for (let i = 0; i < this.notes.length; i++) {
-            sum += this.notes[i];
+            sum += this.notes[i]; // calcul de la somme des notes
         }
-        return  sum/this.notes.length;
+        return  sum/this.notes.length; // calcul de la moyenne; la moyenne est égale à la somme des notes divisée par le nombre des notes (la longueur du tableau)
     }
     /**
      * @return la note max d'un étudiant.
@@ -82,7 +82,7 @@ export class Etudiants {
      */
     getMin() {
         let min = this.notes[0];
-        for (let i = 0; i < this.notes.length - 1; i++) {
+        for (let i = 0; i < this.notes.length; i++) {
             if (this.notes[i] < min) {
                 min = this.notes[i];
             }

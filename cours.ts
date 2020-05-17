@@ -24,7 +24,6 @@ export class Cours {
      * @type {(number|Array)}
      */
     private _etudiant: Etudiants[]; //  un tableau d'objets de type Etudiants.
-
     /**
      * les getters et les setters des attributs: id, title, nbrJours et etudiant
      */
@@ -61,28 +60,41 @@ export class Cours {
     }
 
 
+    constructor(id: number, title: string, nbrJours: number, etudiant: Etudiants[]) {
+        this._id = id;
+        this._title = title;
+        this._nbrJours = nbrJours;
+        this._etudiant = etudiant;
+    }
+
     /** Retourne la moyenne d'un objet de type cours (la moyenne des moyennes des étudiants)
      *
      */
-    calculerMoyenneCours(): void {
+    calculerMoyenneCours() {
+        let sum: number = 0;
+        console.log('nombre des etudiants est: '+this.etudiant.length);
+        for (let i = 0; i < this.etudiant.length; i++) {
+            sum += this.etudiant[i].calculerMoyenne();     // calcul de la somme des moyennes des étudiants
+        }
+        return  sum/this.etudiant.length;  // calcul de la moyenne de la classe
     }
 
     /** Retourne l'indice de l’étudiant dans le tableau etudiants ayant la meilleure moyenne de le cours.
      *
      */
-    getIndexMax(): void {
-    }
+    //getIndexMax(): void {
+    //}
 
     /** Affiche le nom du premier étudiant ayant la meilleure moyenne dans le cours.
      *
      */
-    getNomMax(): void {
-    }
+    //getNomMax(): void {
+    //}
 
     /** Affiche la moyenne du premier Etudiant dont le nom est passé en paramètre.
      *
      * @param nom
      */
-    getMoyenneParNom(nom: string): void {
-    }
+    //getMoyenneParNom(nom: string): void {
+    //}
 }

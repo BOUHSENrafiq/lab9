@@ -54,9 +54,9 @@ var Etudiants = /** @class */ (function () {
          */
         var sum = 0;
         for (var i = 0; i < this.notes.length; i++) {
-            sum += this.notes[i];
+            sum += this.notes[i]; // calcul de la somme des notes
         }
-        return sum / this.notes.length;
+        return sum / this.notes.length; // calcul de la moyenne; la moyenne est égale à la somme des notes divisée par le nombre des notes (la longueur du tableau)
     };
     /**
      * @return la note max d'un étudiant.
@@ -75,7 +75,7 @@ var Etudiants = /** @class */ (function () {
      */
     Etudiants.prototype.getMin = function () {
         var min = this.notes[0];
-        for (var i = 0; i < this.notes.length - 1; i++) {
+        for (var i = 0; i < this.notes.length; i++) {
             if (this.notes[i] < min) {
                 min = this.notes[i];
             }

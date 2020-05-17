@@ -7,7 +7,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
  *  @class Cours
  */
 var Cours = /** @class */ (function () {
-    function Cours() {
+    function Cours(id, title, nbrJours, etudiant) {
+        this._id = id;
+        this._title = title;
+        this._nbrJours = nbrJours;
+        this._etudiant = etudiant;
     }
     Object.defineProperty(Cours.prototype, "id", {
         /**
@@ -56,22 +60,12 @@ var Cours = /** @class */ (function () {
      *
      */
     Cours.prototype.calculerMoyenneCours = function () {
-    };
-    /** Retourne l'indice de l’étudiant dans le tableau etudiants ayant la meilleure moyenne de le cours.
-     *
-     */
-    Cours.prototype.getIndexMax = function () {
-    };
-    /** Affiche le nom du premier étudiant ayant la meilleure moyenne dans le cours.
-     *
-     */
-    Cours.prototype.getNomMax = function () {
-    };
-    /** Affiche la moyenne du premier Etudiant dont le nom est passé en paramètre.
-     *
-     * @param nom
-     */
-    Cours.prototype.getMoyenneParNom = function (nom) {
+        var sum = 0;
+        console.log('nombre des etudiants est: ' + this.etudiant.length);
+        for (var i = 0; i < this.etudiant.length; i++) {
+            sum += this.etudiant[i].calculerMoyenne(); // calcul de la somme des moyennes des étudiants
+        }
+        return sum / this.etudiant.length; // calcul de la moyenne de la classe
     };
     return Cours;
 }());
