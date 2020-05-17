@@ -89,13 +89,17 @@ var Cours = /** @class */ (function () {
         var max = this.etudiant[0].calculerMoyenne();
         var nom = this.etudiant[0].nom;
         for (var i = 0; i < this.etudiant.length; i++) { // boucle for pour parcourir les élément du tableau
-            if (this.etudiant[i].calculerMoyenne() > max) { // condition  sur les éléments du tableau : pour détérminer la moyenne
-                //max = this.etudiant[i].calculerMoyenne(); pour afficher la meilleur moyenne.
-                //indice = i;  // affectation de l'indice
-                nom = this.etudiant[i].nom;
+            if (this.etudiant[i].calculerMoyenne() > max) { // condition  sur les éléments du tableau : pour détérminer la moyenne la plus grande
+                nom = this.etudiant[i].nom; // détérminer le nom
             }
         }
         return nom;
+    };
+    /** Affiche la moyenne du premier Etudiant dont le nom est passé en paramètre.
+     *
+     * @param nom
+     */
+    Cours.prototype.getMoyenneParNom = function (nom) {
     };
     return Cours;
 }());
